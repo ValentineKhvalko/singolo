@@ -104,9 +104,9 @@ header span {
 } 
 
 main {
-    height: 593px;
+    height: 594px;
     background-color:#f06c64;
-    border-bottom: solid #eb676b 8px;
+    border-bottom: solid #eb676b 6px;
     position: relative;
 }
 
