@@ -26,7 +26,7 @@ body {
 
 .cotainer {
     width: 1020px;
-    background-color: rgb(82, 243, 1);
+    margin: auto
 }
 
 header {
@@ -201,8 +201,10 @@ footer {
     font-size: 15px;
 }
 
-.text_content h1 {
-    margin-bottom: 18px;
+.text_content h2 {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .text_content p {
@@ -247,6 +249,7 @@ footer {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
     grid-area: s;
+    left: -5px;
 }
 
 #star {
@@ -257,7 +260,7 @@ footer {
 
 .services {
     width: 310px;
-    height: 123px;
+    height: 124px;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -279,7 +282,7 @@ footer {
     padding-left: 13px;
 }
 
-.services_text h1 {
+.services_text h2 {
     font-family: 'Lato-Bold';
     font-size: 19px;
     margin: 0px;
