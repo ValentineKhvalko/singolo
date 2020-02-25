@@ -318,6 +318,7 @@ footer {
     margin: 12px 0;
     letter-spacing: 0.13px;
     overflow: hidden;
+    white-space: nowrap;
 }
 
 #photo_info p {
