@@ -9,15 +9,15 @@
 <body>
     <div class="cotainer">
         <header>
-            <a href="#"><h1>SINGOLO<span>*</span></h1></a>
-                <ul id='menu'><a href="#">HOME</a>
+            <a href="#"><h1>SINGOLO<span class="red_star">*</span></h1></a>
+                <ul class='menu'><a href="#">HOME</a>
                     <li><a href="#">SERVICES</a></li>
                     <li><a href="#">PORTFOLIO</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">CONTACT</a></li>
                 </ul>
         </header>
-        <main>
+        <div class="phone_container">
             <div class='slider-content'>
                 <div class='phone_1_container'>
                     <img id='phone_pic_1' src="assets/img/photo_telephone_1.png" alt="phone_pic_1">
@@ -36,74 +36,72 @@
                     <a href="#"><img src="assets/img/left.png" alt="left_arrow"></a>
                 </div>
             </div>
-        </main>
-        <footer>
-            <div class="footer_content">
-                <div class="text_content">
-                    <h2>Our Services</h2>
-                    <p>Fusee dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-                        Duis mollis, non commodo luctus, nisi erat porttitor</p>
-                    <p id='next_p'>ligula, eget lacinia odio sem nec elit. Fusee dapibus, 
-                        tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+        <div class="our_services_container">
+            <div class="text_content">
+                <h2>Our Services</h2>
+                <p>Fusee dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+                Duis mollis, non commodo luctus, nisi erat porttitor</p>
+                <p id='next_p'>ligula, eget lacinia odio sem nec elit. Fusee dapibus, 
+                    tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+            </div>
+            <div class="services_container">
+                <div class="services" id='design'>
+                    <img class="services_pic" src="assets/img/pen.png">
+                    <div class="services_text">
+                        <h2>Custom Design</h2>
+                        <p>Curabitur vestibulum eget mauris quis
+                            laoreet. Phasellus in quam laoreet, viverra
+                            lacus ut, ultrices velit.</p>
+                    </div>
                 </div>
-                <div class="services_container">
-                    <div class="services" id='design'>
-                        <img class="services_pic" src="assets/img/pen.png">
-                        <div class="services_text">
-                            <h2>Custom Design</h2>
-                            <p>Curabitur vestibulum eget mauris quis
-                                laoreet. Phasellus in quam laoreet, viverra
-                                lacus ut, ultrices velit.</p>
-                        </div>
+                <div class="services" id='ideas'>
+                    <img class="services_pic" src="assets/img/light.png">
+                    <div class="services_text">
+                        <h2>Inovative Ideas</h2>
+                        <p>Quisque luctus, quam eget molestie com-
+                            modo, lacus purus cursus purus, nec 
+                            rutrum tellus dolor id lorem.</p>
                     </div>
-                    <div class="services" id='ideas'>
-                        <img class="services_pic" src="assets/img/light.png">
-                        <div class="services_text">
-                            <h2>Inovative Ideas</h2>
-                            <p>Quisque luctus, quam eget molestie com-
-                                modo, lacus purus cursus purus, nec 
-                                rutrum tellus dolor id lorem.</p>
-                        </div>
+                </div>
+                <div class="services" id='answer'>
+                    <img class="services_pic" src="assets/img/heart_1.png">
+                    <div class="services_text">
+                        <h2>Love Is The Answer</h2>
+                        <p>Nulla sed nunc et tortor luctus faucibus. 
+                            Morbi at aliquet turpis, et consequat felis. 
+                            Quisque condimentum.</p>
                     </div>
-                    <div class="services" id='answer'>
-                        <img class="services_pic" src="assets/img/heart_1.png">
-                        <div class="services_text">
-                            <h2>Love Is The Answer</h2>
-                            <p>Nulla sed nunc et tortor luctus faucibus. 
-                                Morbi at aliquet turpis, et consequat felis. 
-                                Quisque condimentum.</p>
-                        </div>
+                </div>
+                <div class="services" id='layuot'>
+                    <img class="services_pic" src="assets/img/note_pic.png">
+                    <div class="services_text">
+                        <h2>Responsive Layout</h2>
+                        <p>Sed porttitor placerat rhoncus. In at nunc 
+                            tellus. Maecenas blandit nunc ligula. Prae- 
+                            sentelit leo.</p>
                     </div>
-                    <div class="services" id='layuot'>
-                        <img class="services_pic" src="assets/img/note_pic.png">
-                        <div class="services_text">
-                            <h2>Responsive Layout</h2>
-                            <p>Sed porttitor placerat rhoncus. In at nunc 
-                                tellus. Maecenas blandit nunc ligula. Prae- 
-                                sentelit leo.</p>
-                        </div>
+                </div>
+                <div class="services" id='support'>
+                    <img class="services_pic" src="assets/img/answer.png">
+                    <div class="services_text">
+                        <h2>24/7 Support</h2>
+                        <p>Vivamus vel quam lacinia, tincidunt dui 
+                            non, vehicula nisi. Nulla a sem erat. Pellen-  
+                            tesque egestas venenatis lorem.</p>
                     </div>
-                    <div class="services" id='support'>
-                        <img class="services_pic" src="assets/img/answer.png">
-                        <div class="services_text">
-                            <h2>24/7 Support</h2>
-                            <p>Vivamus vel quam lacinia, tincidunt dui 
-                                non, vehicula nisi. Nulla a sem erat. Pellen-  
-                                tesque egestas venenatis lorem.</p>
-                        </div>
                     </div>
-                    <div class="services" id='star'>
-                        <img class="services_pic" src="assets/img/star.png">
-                        <div class="services_text">
-                            <h2>Feel Like A Star</h2>
-                            <p>Quisque hendrerit purus dapibus, ornare 
-                                nibh vitae, viverra nibh. Fusee vitae 
-                                aliquam tellus.</p>
-                        </div>
+                <div class="services" id='star'>
+                    <img class="services_pic" src="assets/img/star.png">
+                    <div class="services_text">
+                        <h2>Feel Like A Star</h2>
+                        <p>Quisque hendrerit purus dapibus, ornare 
+                            nibh vitae, viverra nibh. Fusee vitae 
+                            aliquam tellus.</p>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     </div>
 </body>
 </html>

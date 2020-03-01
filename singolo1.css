@@ -58,11 +58,11 @@ header h1:hover{
     color: lightgrey;
 }
 
-header span {
+.red_star {
     color: red;
 }
 
-#menu {
+.menu {
     position: absolute;
     padding: 0;
     display: flex;
@@ -72,38 +72,38 @@ header span {
     letter-spacing: 0.44px;
 }
 
-#menu li {
+.menu li {
     margin-left: 25px;
     color: #494e62;
     padding-left: 5px;
     transition: color 0.2s;
 }
 
-#menu li:hover {
+.menu li:hover {
     color:white;
 }
 
-#menu li a {
+.menu li a {
     color: white;
     transition: color 0.3s;
     
 }
 
-#menu li a:hover {
+.menu li a:hover {
     color:#f69d98;
 }
 
-#menu a {
+.menu a {
     text-decoration: none;
     color: #db655f;
     transition: color 0.3s;
 }
 
-#menu a:hover{
+.menu a:hover{
     color:white;
 } 
 
-main {
+.phone_container {
     height: 594px;
     background-color:#f06c64;
     border-bottom: solid #eb676b 6px;
@@ -185,7 +185,7 @@ main {
     padding-left: 7px;
 }
 
-footer {
+.our_services_container {
     height: 494px;
     background-color: #f2f2f2;
     border-bottom: solid white 6px;

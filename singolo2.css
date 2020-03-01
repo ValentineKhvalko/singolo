@@ -24,25 +24,25 @@ body {
     width: 100%;
 }
 
-#container {
+.portfolio_container {
     width: 1020px;
     margin: auto;
     background-color:#2d2f39;
 }
 
-header {
+.text_and_links_ortfolio {
     width: 980px;
     padding-left: 40px;
     height: 196px;
 }
 
-header a {
+.text_and_links_ortfolio a {
     text-decoration: none;
     color: #666d89;
     transition: color;
 }
 
-header h1 {
+.text_and_links_ortfolio h1 {
     width:120px;
     font-size: 30px;
     line-height: 18px;
@@ -54,11 +54,11 @@ header h1 {
     letter-spacing: 0.5px;
 }
 
-header a:hover {
+.text_and_links_ortfolio a:hover {
     color:white;
 }
 
-header p {
+.text_and_links_ortfolio p {
     height: 40px;
     font-size: 18px;
     line-height: 30px;
@@ -71,13 +71,13 @@ header p {
     letter-spacing: -0.22px;
 }
 
-ul {
+.text_and_links_ortfolio ul {
     margin: 0px;
     padding-left: 0px;
     padding-bottom: 19px;
 }
 
-li a {
+.text_and_links_ortfolio li a {
     text-decoration: none;
     color: #767e9e;
     -webkit-transform: color;
@@ -85,11 +85,11 @@ li a {
             transform: color;
 }
 
-li a:hover {
+.text_and_links_ortfolio li a:hover {
     color: white;
 }
 
-li {
+.text_and_links_ortfolio li {
     margin-right: 6px;
     display: inline;
     list-style-type: none;
@@ -105,22 +105,18 @@ li {
     transform: border;
 }
 
-li:hover {
+.text_and_links_ortfolio li:hover {
     border: solid white 1px;
 }
 
-li:first-child a {
+.text_and_links_ortfolio li:first-child a {
     color:white;
 }
 
-li:first-child {
+.text_and_links_ortfolio li:first-child {
     border:solid 1px white;
 }
 
-main {
-    height: 668px;
-    border-bottom:#313745 solid 6px;
-}
 
 #one {
     -ms-grid-row: 1;
@@ -217,9 +213,14 @@ main {
     
 }
 
+.main_img_container {
+    height: 668px;
+    border-bottom:#313745 solid 6px;
+}
+
 .img_container {
-    width: 960px;
     height: 620px;
+    width: 960px;
     padding-left: 40px;
     padding-right: 40px;
     overflow: hidden;
@@ -232,18 +233,16 @@ main {
     "n te el tw";
 }
 
-footer {
+
+.container_info {
     height: 728px;
     background-color:#f1f1f1;
     border-bottom: solid 6px white;
-}
-
-#container_info {
     padding-left: 40px;
     padding-right: 22px;
 }
 
-#text_info h2 {
+.text_info h2 {
     margin: 0px;
     padding-top: 70px;
     font-family: 'Lato-Bold';
@@ -254,7 +253,7 @@ footer {
     text-align: left;
 }
 
-#text_info p {
+.text_info p {
     margin: 0px;
     font-size: 18px;
     line-height: 30px;
@@ -266,7 +265,7 @@ footer {
     letter-spacing: -0.04px;
 }
 
-#text_info .next_p {
+.text_info .next_p {
     letter-spacing: -0.16px;
     padding-top: 0px;
     padding-bottom: 45px;
@@ -291,16 +290,16 @@ footer {
     grid-area: third;
 }
 
-#photo_info div {
+.photo_info div {
     width: 320px;
 }
 
-#photo_info div .photo_img {
+.photo_info div .photo_img {
     width: 300px;
     height: 300px;
 }
 
-#photo_info {
+.photo_info {
     height: 442px;
     display: -ms-grid;
     display: grid;
@@ -308,7 +307,7 @@ footer {
     "first second third"
 }
 
-#photo_info h2 {
+.photo_info h2 {
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
@@ -321,7 +320,7 @@ footer {
     white-space: nowrap;
 }
 
-#photo_info p {
+.photo_info p {
     width: 300px;
     font-size: 12px;
     margin: 10px 0;
@@ -333,7 +332,13 @@ footer {
     padding-bottom: 14px;
 }
 
-#photo_info a {
-    margin-right: 4px;
+.photo_info a img {
+    margin-right: 2px;
+    border-radius: 50%;
+    transition: background-color;
+}
+
+.photo_info a img:hover {
+    background-color:white;
 }
 

@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Lato-Black;
+    src: url('assets/fonts/Lato-Black.ttf');
+}
+
+@font-face {
+    font-family: Lato-Bold;
+    src: url('assets/fonts/Lato-Bold.ttf');
+}
+
+@font-face {
+    font-family: Lato-Regular;
+    src: url('assets/fonts/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family: Lato-Light;
+    src: url('assets/fonts/Lato-Light.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.container_get_a_quote {
+    width: 1020px;
+    margin: auto;
+    background-color:#f06c64;
+    min-height: 648px;
+    border-bottom: solid 6px #eb676b;
+}
+
+.text_get_a_quote {
+    max-width: 1020px;
+    padding-left: 40px;
+    padding-right: 22px;
+    color: #f0d1d1;
+}
+
+.text_get_a_quote h2 {
+    margin: 0px;
+    padding-top: 70px;
+    font-family: 'Lato-Bold';
+    font-size: 30px;
+    line-height: 18px;;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: -0.1px;
+}
+
+.text_get_a_quote p {
+    width: 940px;
+    margin-bottom: 0px;
+    padding-top: 9px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "Lato-Light";
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: -0.05px;
+}
+
+.form_and_contact_container {
+    padding-left: 40px;
+    display: flex;
+}
+
+.form_container {
+    margin-top: 43px;
+}
+
+.input_container input, textarea {
+    background-color: #d6564f;
+    border: 1px solid #d6564f; 
+    border-radius: 5px;
+    width: 603px;
+    margin-right: 20px;
+    height: 34px;
+    margin-bottom: 16px;
+    font-family: "Lato-Regular";
+    font-size: 11px;
+    padding-left: 14px; 
+    color:#ec7e7f;
+    letter-spacing: 0.6px;
+    resize: none;
+}
+
+.form_container .name input:invalid, .form_container .email input:invalid {
+    border: 1px solid #f0d1d1;
+} 
+
+textarea:focus, input:focus, .submit button:focus {
+    outline: none;
+}
+
+::placeholder {
+    color:#ec7e7f;
+    letter-spacing: 0.6px;
+}
+
+.form_container .describe textarea {
+    width: 602px;
+    height: 186px;
+    padding-top: 12px;
+}
+
+.submit button {
+    padding: 6px 11px;
+    background-color: #d6564f;
+    border-radius: 5px;
+    border: 1px solid #f0d1d1;
+    color: #f0d1d1;
+    letter-spacing: 0.7px;
+    transition: color, background-color;
+}
+
+.submit button:hover {
+    color: #eb676b;
+    background-color: #f0d1d1;
+}
+
+.contact_info h3 {
+    margin: 0px;
+    padding-top: 44px;
+    font-family: 'Lato-Bold';
+    font-size: 18px;
+    color: #f0d1d1;
+    line-height: 18px;;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.15px;
+}
+
+.adress_container {
+    margin-top: 22px;
+}
+
+.contact_info p {
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 22px;
+    font-family: "Lato-Regular";
+    color: #f0d1d1;
+    font-weight: 300;
+    text-align: left;
+    letter-spacing: 0.4px;
+    transition: color;
+}
+
+.link_to_contact p:hover {
+    color:white;
+}
+
+.link_to_contact a {
+    display: flex;
+    text-decoration: none;
+}
+
+
+
+.location img {
+    width: 7px;
+    height: 11px;
+    padding: 5px 13px 0 4px;
+}
+
+.link_to_contact p {
+    margin: 0px;
+    letter-spacing: 0.3px;
+}
+
+.tel img {
+    width: 12px;
+    height: 12px;
+    padding: 4px 12px 0 0;
+}
+
+.mail img {
+    width: 13px;
+    height: 8px;
+    padding: 7px 11px 0 0;
+}
+
+footer {
+    width: 1020px;
+    margin: auto;
+    height: 76px;
+    background-color:#2d303a;
+    position: relative;
+}
+
+footer h3 {
+    margin: 0px;
+    padding: 31px 43px;
+    display: inline-block;
+    font-family: "Lato-Regular";
+    font-size: 11px;
+    color: #666d89;
+    letter-spacing: 0.5px;
+}
+
+#social_container {
+    position: absolute;
+    right:39px;
+    top:21px;
+    display: inline-block;  
+}
+
+#social_container a {
+    text-decoration: none;
+}
+
+.social_links {
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    margin-left: 4px;
+    text-decoration: none;
+    border: solid 1px #666d89;
+    border-radius: 50%;
+    padding: 7px 0 0 7px;
+    transition: background-color;
+}
+
+.social_links:hover {
+    background-color:#f0d8d9;
+}
+
+
