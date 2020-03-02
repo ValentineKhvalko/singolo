@@ -513,6 +513,10 @@ header h1:hover{
     "n te el tw";
 }
 
+.img_container:nth-child(n+13){
+    display: none;
+}
+
 .container_info {
     height: 728px;
     background-color:#f1f1f1;
