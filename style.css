@@ -518,7 +518,7 @@ header h1:hover{
 }
 
 .container_info {
-    height: 728px;
+    height: 727px;
     background-color:#f1f1f1;
     border-bottom: solid 6px white;
     padding-left: 40px;
@@ -601,6 +601,7 @@ header h1:hover{
     letter-spacing: 0.13px;
     overflow: hidden;
     white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .photo_info p {
@@ -703,7 +704,7 @@ textarea:focus, input:focus, .submit button:focus {
 
 .form_container .describe textarea {
     width: 602px;
-    height: 186px;
+    height: 188px;
     padding-top: 10px;
 }
 
@@ -792,7 +793,7 @@ footer {
 
 footer h3 {
     margin: 0px;
-    padding: 29px 43px;
+    padding: 30px 43px;
     display: inline-block;
     font-family: "Lato-Regular";
     font-size: 11px;
