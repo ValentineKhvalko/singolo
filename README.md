@@ -1,0 +1,1 @@
+https://valentinekhvalko.github.io/singolo/ [GitHub](https://valentinekhvalko.github.io/singolo/)
