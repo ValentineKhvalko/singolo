@@ -67,6 +67,16 @@ function addRemoveClassHiddenSec() {
     screen_off_phone2.classList.remove('hidden') : screen_off_phone2.classList.add('hidden');
 }
 
+// add portfolio_active class to menu 
+
+const portfolio_ul = document.getElementById('portfolio_ul');
+
+portfolio_ul.addEventListener('click', (event) => {
+    portfolio_ul.querySelectorAll('li').forEach(el => el.classList.remove('portfolio_active'));
+    event.target.classList.add('portfolio_active');
+});
+
+
 // add active_border class to portfolio img 
 
 const PORTFOLIO_CONTAINER = document.getElementById("portfolio_img_container");
