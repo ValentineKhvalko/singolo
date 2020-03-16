@@ -18,6 +18,10 @@
     src: url('assets/fonts/Lato-Light.ttf');
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -32,12 +36,13 @@ body {
 header {
     width: auto;
     height: 89px;
+    width: 1020px;
     background-color: #292c37;
     border-bottom: solid #2e3444 6px;
     color: white;
-    display: flex;
-    position: relative;
+    position: fixed;
     font-family: 'Lato-Bold';
+    z-index: 9999;
 }
 
 header a {
@@ -62,7 +67,7 @@ header h1:hover{
     color: red;
 }
 
-.menu {
+#menu {
     position: absolute;
     padding: 0;
     display: flex;
@@ -72,69 +77,98 @@ header h1:hover{
     letter-spacing: 0.44px;
 }
 
-.menu li {
+.menu_li {
     margin-left: 25px;
-    color: #494e62;
+    color: white    ;
     padding-left: 5px;
     transition: color 0.2s;
 }
 
-.menu li:hover {
-    color:white;
-}
-
-.menu li a {
-    color: white;
-    transition: color 0.3s;
-    
-}
-
-.menu li a:hover {
+.menu_li:hover {
     color:#f69d98;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #db655f;
     transition: color 0.3s;
 }
 
-.menu a:hover{
-    color:white;
-} 
+.active {
+    color: #f06c64;
+}
 
 .phone_container {
-    height: 594px;
-    background-color:#f06c64;
-    border-bottom: solid #eb676b 6px;
+    padding-top: 95px;
+    height: 600px;
     position: relative;
+    overflow: hidden;
 }
 
-.phone_1_container {
+.line {
+    transition: all ease 1s;
+    position: relative;
+    left: 0;
+}
+
+.sliders {
+    float: left;
+}
+
+#slider-content {
+    height: 594px;
+    width: 1020px;
+    background-color:#f06c64;
+    border-bottom: solid #eb676b 6px;
+    display: block;
+}
+
+#phone_1_container {
     width: 215px;
     height: 460px;
     display: flex;
     position: absolute;
     left: 111px;
     top: 53px;
- }
+}
 
-.phone_2_container {
+#screen_on_off_first {
+    width: 215px;
+    height: 455px;
+    display: flex;
+    position: absolute;
+    left: 111px;
+    top: 53px;
+}
+
+#phone_2_container {
     width: 465px;
     height: 215px;
     display: flex;
     position: absolute;
-    right: 130px;
+    left: 425px;
     top: 174px;
  }
 
-#phone_pic_1, #phone_1, #shadow_1, #phone_pic_2, #phone_2, #shadow_2, #left_arrow, #right_arrow {
+ #screen_on_off_second {
+    width: 456px;
+    height: 213px;
+    display: flex;
+    position: absolute;
+    left: 425px;
+    top: 174px;
+ }
+
+#phone_pic_1, #phone_1, #shadow_1, #phone_pic_2, #phone_2, #shadow_2, #left_arrow, #right_arrow, #screen_off_phone1, #screen_off_phone2, #screen_on_off_first, #screen_on_off_second {
    position: absolute;
 }
 
 #phone_pic_1 {
     left: 15px;
     top: 65px;
+}
+
+#screen_off_phone1 {
+    height: 334px;
+    width: 188px;
+    left: 15px;
+    top: 65px;
+    background-color:black;
 }
 
 #shadow_1 {
@@ -147,9 +181,25 @@ header h1:hover{
     left: 60px;
 }
 
+#screen_off_phone2 {
+    height: 190px;
+    width: 334px;
+    top: 13px;
+    left: 60px;
+    background-color: black;
+}
+
 #shadow_2 {
     top: 13px;
     left: 13px;
+}
+
+#second_slider {
+    height: 594px;
+    width: 1020px;
+    background-image: url(assets/img/second_slider.png);
+    border-bottom: solid #adbff1 6px;
+    position: relative;
 }
 
 #left_arrow, #right_arrow {
@@ -158,7 +208,7 @@ header h1:hover{
 }
 
 #left_arrow {
-    top: 280px;
+    top: 375px;
     left: 40px;
     transition: all 0.2s;
 }
@@ -172,7 +222,7 @@ header h1:hover{
 }
 
 #right_arrow {
-    top: 280px;
+    top: 375px;
     right: 42px;
     transition: all 0.2s;
 }
@@ -389,14 +439,9 @@ header h1:hover{
     border: solid white 1px;
 }
 
-.text_and_links_portfolio li:first-child a {
+.portfolio_active {
     color:white;
 }
-
-.text_and_links_portfolio li:first-child {
-    border:solid 1px white;
-}
-
 
 #one {
     -ms-grid-row: 1;
@@ -517,6 +562,11 @@ header h1:hover{
     display: none;
 }
 
+.active_border {
+    border: solid #F06C64 5px;
+    border-radius: 5%;
+}
+
 .container_info {
     height: 727px;
     background-color:#f1f1f1;
@@ -612,7 +662,7 @@ header h1:hover{
     color: #767e9e;
     font-family: "Lato-Light";
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
     padding-bottom: 14px;
 }
 
@@ -702,7 +752,7 @@ textarea:focus, input:focus, .submit button:focus {
     letter-spacing: 0.6px;
 }
 
-.form_container .describe textarea {
+#describe {
     width: 602px;
     height: 188px;
     padding-top: 10px;
@@ -721,6 +771,44 @@ textarea:focus, input:focus, .submit button:focus {
 .submit button:hover {
     color: #eb676b;
     background-color: #f0d1d1;
+}
+
+#message_block {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #0008;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    position: fixed;
+    top:45%;
+    left: 45%;
+    border: 2px solid black;
+    border-radius: 7px;
+    text-align: center;
+    line-height: 5px;
+    color: white;
+    background-color: #f06c64;
+}
+
+#message p {
+    padding: 0 20px;
+}
+
+#close_btn {
+    width: 50px;
+    height: 30px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #f0d1d1;
+    margin-bottom: 10px;
 }
 
 .contact_info h3 {
@@ -746,7 +834,7 @@ textarea:focus, input:focus, .submit button:focus {
     font-family: "Lato-Regular";
     color: #f0d1d1;
     font-weight: 300;
-    text-align: left;
+    text-align: justify;
     letter-spacing: 0.4px;
     transition: color;
 }

@@ -10,31 +10,41 @@
     <div class="cotainer">
         <header>
             <a href="#"><h1>SINGOLO<span class="red_star">*</span></h1></a>
-                <ul class='menu'><a href="#">HOME</a>
-                    <li><a href="#our_services">SERVICES</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#about_us">ABOUT</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                <ul id='menu'>
+                    <a href="#"><li class="menu_li active">HOME</li></a>
+                    <a href="#our_services"><li class="menu_li">SERVICES</li></a>
+                    <a href="#portfolio"><li class="menu_li">PORTFOLIO</li></a>
+                    <a href="#about_us"><li class="menu_li">ABOUT</li></a>
+                    <a href="#contact"><li class="menu_li">CONTACT</li></a>
                 </ul>
         </header>
-        <div class="phone_container">
-            <div class='slider-content'>
-                <div class='phone_1_container'>
-                    <img id='phone_pic_1' src="assets/img/photo_telephone_1.png" alt="phone_pic_1">
-                    <img id='phone_1' src="assets/img/telephone_1.png" alt="phone_1">
-                    <img id='shadow_1' src="assets/img/shadow_1.png" alt="shadow_1">
+        <div class="phone_container" id='slidersContainer'>
+            <div class="line">
+                <div class="sliders" id='slider-content'>
+                    <div id='phone_1_container'>
+                        <img id='phone_pic_1' src="assets/img/photo_telephone_1.png" alt="phone_pic_1">
+                        <img id='phone_1' src="assets/img/telephone_1.png" alt="phone_1">
+                        <img id='shadow_1' src="assets/img/shadow_1.png" alt="shadow_1">
+                        <div id="screen_off_phone1" class = 'hidden'></div>
+                    </div>
+                    <div id='phone_2_container'>
+                        <img id='phone_pic_2' src="assets/img/pic_t_2.png" alt="phone_pic_2">
+                        <img id='phone_2' src="assets/img/telephone_2.png" alt="phone_2">
+                        <img id='shadow_2' src="assets/img/shadow_2.png" alt="shadow_2">
+                        <div id="screen_off_phone2" class = 'hidden'></div>
+                    </div>
+                    <div id ='screen_on_off_first'></div>
+                    <div id ='screen_on_off_second'></div>
                 </div>
-                <div class='phone_2_container'>
-                    <img id='phone_pic_2' src="assets/img/pic_t_2.png" alt="phone_pic_2">
-                    <img id='phone_2' src="assets/img/telephone_2.png" alt="phone_2">
-                    <img id='shadow_2' src="assets/img/shadow_2.png" alt="shadow_2">
+                <div class="sliders" id='second_slider'>
+                
                 </div>
-                <div id='right_arrow'>
-                    <a href="#"><img src="assets/img/right.png" alt="right_arrow"></a>
-                </div>
-                <div id='left_arrow'>
-                    <a href="#"><img src="assets/img/left.png" alt="left_arrow"></a>
-                </div>
+            </div>
+            <div id='right_arrow'>
+                <a href="#"><img src="assets/img/right.png" alt="right_arrow"></a>
+            </div>
+            <div id='left_arrow'>
+                <a href="#"><img src="assets/img/left.png" alt="left_arrow"></a>
             </div>
         </div>
         <div class="our_services_container" id='our_services'>
@@ -107,15 +117,15 @@
         <div class='text_and_links_portfolio'>
             <h1><a href='#'>Portfolio</a></h1>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-            <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Web Design</a></li>
-                <li><a href="#">Graphic Design</a></li>
-                <li><a href="#">Artwork</a></li>
+            <ul id='portfolio_ul'>
+                <a href="#portfolio" onclick="suffleImg()"><li class="portfolio_active">All</li></a>
+                <a href="#portfolio" onclick="suffleImg()"><li>Web Design</li></a>
+                <a href="#portfolio" onclick="suffleImg()"><li>Graphic Design</li></a>
+                <a href="#portfolio" onclick="suffleImg()"><li>Artwork</li></a>
             </ul>
         </div>
         <div class="main_img_container">
-            <div class="img_container">
+            <div class="img_container" id="portfolio_img_container">
                 <div id="one"><img id="one_img" src="assets/singolo_2_img/one.png" alt="one"></div>
                 <div id="two"><img id="two_img" src="assets/singolo_2_img/two.png" alt="two"></div>
                 <div id="three"><img id="three_img" src="assets/singolo_2_img/three.png" alt="three"></div>
@@ -194,23 +204,33 @@
             <div class="form_container">
                 <form>
                     <div class="input_container name">
-                        <input type="text" pattern="^[a-zA-ZА-Яа-я][a-zA-ZА-Яа-я-_\.\s]{1,20}$" placeholder="Name (Required)">
+                        <input type="text" required pattern="^[a-zA-ZА-Яа-я][a-zA-ZА-Яа-я-_\.\s]{1,20}$" placeholder="Name (Required)">
                     </div>
                     <div class="input_container email">
-                        <input type="email" placeholder="Email (Required)">
+                        <input type="email" required placeholder="Email (Required)">
                     </div>
-                    <div class="input_container subject">
-                        <input placeholder="Subject">
+                    <div class="input_container">
+                        <input placeholder="Subject" id='subject'>
                     </div>
-                    <div class="input_container describe">
-                        <textarea placeholder="Describe your project in detail..."></textarea>
+                    <div class="input_container">
+                        <textarea id='describe' placeholder="Describe your project in detail..."></textarea>
                     </div>
                     <div class="submit">
-                        <button>
+                        <button id="subm">
                             Submit
                         </button>
                     </div>
                 </form>
+                <div id='message_block' class="hidden">
+                    <div id='message'>
+                        <p>Письмо отправлено</p>
+                        <br>
+                        <p>Тема:<span id='result_subject'></span></p>
+                        <br>
+                        <p>Описание:<span id='result_describe'></span></p>
+                        <button id='close_btn'>OK</button>
+                    </div>
+                </div>
             </div>   
             <div class="contact_info">
                 <h3>Contact Information</h3>
@@ -289,5 +309,6 @@
             </a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

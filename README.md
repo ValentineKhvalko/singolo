@@ -1,0 +1,1 @@
+[My Singolo](https://valentinekhvalko.github.io/singolo/)
