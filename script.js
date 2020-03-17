@@ -26,7 +26,7 @@ MENU.addEventListener('click', (event) => {
     }
 });
 
-// change active links when scroll page 
+//change active links when scroll page 
 
 window.addEventListener('scroll', () => {
     if(window.scrollY < SERVICES.offsetTop - HEADER.offsetHeight) {
@@ -54,6 +54,7 @@ window.addEventListener('scroll', () => {
         document.getElementById('contact_scroll').classList.add('active');
     }
 });
+
 
 // flip sliders
 
@@ -167,7 +168,8 @@ const CLOSE_BUTTON = document.getElementById('close_btn');
 const NAME_INPUT = document.getElementById('name');
 const EMAIL_INPUT = document.getElementById('email');
 
-FORM.addEventListener('submit', () => {
+FORM.addEventListener('submit', (event) => {
+    event.preventDefault();
     if(NAME_INPUT.checkValidity() && EMAIL_INPUT.checkValidity()) {
         const subject = document.getElementById('subject').value.toString();
         const describe = document.getElementById('describe').value.toString();
