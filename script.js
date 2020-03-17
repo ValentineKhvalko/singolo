@@ -1,10 +1,58 @@
 // add active class to MENU
 
 const MENU = document.getElementById('menu');
+const HEADER = document.querySelector('.header');
+const SERVICES = document.getElementById('our_services');
+const PORTFOLIO = document.getElementById('portfolio');
+const ABOUT_US = document.getElementById('about_us');
+const CONTACT = document.getElementById('contact');
 
 MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
-    event.target.classList.add('active');
+    if(event.target.tagName == 'LI') {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        event.target.classList.add('active');
+        if(event.target.id == 'services_scroll') {
+            window.scroll(0, SERVICES.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id == 'portfolio_scroll') {
+            window.scroll(0, PORTFOLIO.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id == 'about_us_scroll') {
+            window.scroll(0, ABOUT_US.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id =='contact_scroll') {
+            window.scroll(0, CONTACT.offsetTop - HEADER.offsetHeight + 2);
+        }
+    }
+});
+
+// change active links when scroll page 
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY < SERVICES.offsetTop - HEADER.offsetHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('home_scroll').classList.add('active');
+    }
+    
+    if(window.scrollY >= SERVICES.offsetTop - HEADER.offsetHeight && window.scrollY < PORTFOLIO.offsetTop - HEADER.offsetHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('services_scroll').classList.add('active');
+    }
+    
+    if(window.scrollY >= PORTFOLIO.offsetTop - HEADER.offsetHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('portfolio_scroll').classList.add('active');
+    }
+    
+    if(window.scrollY >= ABOUT_US.offsetTop - HEADER.offsetHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('about_us_scroll').classList.add('active');
+    }
+    
+    if(window.scrollY >= CONTACT.offsetTop - HEADER.offsetHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('contact_scroll').classList.add('active');
+    }
 });
 
 // flip sliders
@@ -91,11 +139,12 @@ PORTFOLIO_CONTAINER.addEventListener('click', (event) => {
 // Suffle portfolio img 
 
 let portfolio_img_src = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
+let portfolio_img_src_original = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
 
 function suffleImg() {
-    let sufflePortfolio_img_src = suffle(portfolio_img_src);
+    suffle(portfolio_img_src);
     PORTFOLIO_CONTAINER.querySelectorAll('div > img').forEach((el, i) => {
-        el.src = "assets/singolo_2_img/" + sufflePortfolio_img_src[i] + ".png";
+        el.src = "assets/singolo_2_img/" + portfolio_img_src[i] + ".png";
     });
 }
 
@@ -112,21 +161,27 @@ function suffle(arr){
 
 // message form
 
+const FORM = document.getElementById('form');
 const BUTTON = document.getElementById('subm');
 const CLOSE_BUTTON = document.getElementById('close_btn');
+const NAME_INPUT = document.getElementById('name');
+const EMAIL_INPUT = document.getElementById('email');
 
-BUTTON.addEventListener('click', () => {
-    const subject = document.getElementById('subject').value.toString();
-    const describe = document.getElementById('describe').value.toString();
-    document.getElementById('result_subject').innerText = subject ? " " + subject: " Без темы";
-    document.getElementById('result_describe').innerText = describe ? " " + describe: " Без описания";
-    document.getElementById('message_block').classList.remove('hidden');
+FORM.addEventListener('submit', () => {
+    if(NAME_INPUT.checkValidity() && EMAIL_INPUT.checkValidity()) {
+        const subject = document.getElementById('subject').value.toString();
+        const describe = document.getElementById('describe').value.toString();
+        document.getElementById('result_subject').innerText = subject ? " " + subject: " Без темы";
+        document.getElementById('result_describe').innerText = describe ? " " + describe: " Без описания";
+        document.getElementById('message_block').classList.remove('hidden');
+    }
 });
 
 CLOSE_BUTTON.addEventListener('click', () => {
     document.getElementById('result_subject').innerText = "";
     document.getElementById('result_describe').innerText = "";
     document.getElementById('message_block').classList.add('hidden');
+    FORM.reset();
 });
 
 
