@@ -6,6 +6,7 @@ const SERVICES = document.getElementById('our_services');
 const PORTFOLIO = document.getElementById('portfolio');
 const ABOUT_US = document.getElementById('about_us');
 const CONTACT = document.getElementById('contact');
+const FOOTER = document.getElementById('footer');
 
 MENU.addEventListener('click', (event) => {
     if(event.target.tagName == 'LI') {
@@ -33,28 +34,27 @@ window.addEventListener('scroll', () => {
         MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
         document.getElementById('home_scroll').classList.add('active');
     }
-    
     if(window.scrollY >= SERVICES.offsetTop - HEADER.offsetHeight && window.scrollY < PORTFOLIO.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
         document.getElementById('services_scroll').classList.add('active');
     }
-    
     if(window.scrollY >= PORTFOLIO.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
         document.getElementById('portfolio_scroll').classList.add('active');
     }
-    
     if(window.scrollY >= ABOUT_US.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
         document.getElementById('about_us_scroll').classList.add('active');
     }
-    
     if(window.scrollY >= CONTACT.offsetTop - HEADER.offsetHeight) {
         MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
         document.getElementById('contact_scroll').classList.add('active');
     }
+    if(window.scrollY+1 >= document.documentElement.scrollHeight-document.documentElement.clientHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('contact_scroll').classList.add('active');
+    }
 });
-
 
 // flip sliders
 
