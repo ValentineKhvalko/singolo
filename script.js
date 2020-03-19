@@ -58,44 +58,54 @@ window.addEventListener('scroll', () => {
 
 // flip sliders
 
-const slidersContainer = document.getElementById('slidersContainer');
-const slidersArr = slidersContainer.querySelectorAll('.sliders');
-const leftArrow = document.getElementById('left_arrow');
-const rightArrow = document.getElementById('right_arrow');
-let line = document.querySelector('.line');
-let sliderWidth = document.querySelector('.sliders').offsetWidth;
-let widthArray = [0];
-let lineWidth = 0;
-let offSet = 0;
-let step = 1;
-let remainder = 0;
+let items = document.querySelectorAll('.item');
+let currentItem = 0;
+let = isEnabled = true;
 
-for(let i = 0; i < slidersArr.length; i++) {
-    widthArray.push(slidersArr[i].offsetWidth);
-    lineWidth += slidersArr[i].offsetWidth;
+function changeCurrentItem(n) {
+    currentItem = (n + items.length) % items.length;
 }
 
-line.style.width = lineWidth+'px';
+function hideItem (direction) {
+    isEnabled = false;
+    items[currentItem].classList.add(direction);
+    items[currentItem].addEventListener('animationend', function(){
+        this.classList.remove('active_slider', direction);
+    });
+} 
 
-rightArrow.addEventListener('click', flippingSlides);
-leftArrow.addEventListener('click', flippingSlides);
+function showItem (direction) {
+    items[currentItem].classList.add('next', direction);
+    items[currentItem].addEventListener('animationend', function(){
+        this.classList.remove('next', direction);
+        this.classList.add('active_slider');
+        isEnabled = true;
+    });
+} 
 
-function flippingSlides() {
-    remainder = lineWidth - sliderWidth - (offSet + widthArray[step]);  
-    if(remainder >= 0) {
-        offSet = offSet + widthArray[step];
-        line.style.left = -offSet+'px';
-    } else {
-        offSet = 0;
-        step = 0;
-    }
-    if(step + 1 == slidersArr.length) {
-        offSet = 0;
-        step = 0;
-    } else {
-        step++;
-    }
+function previousItem(n) {
+    hideItem('to-right');
+    changeCurrentItem( n - 1 );
+    showItem('from-left');
 }
+
+function nextItem(n) {
+    hideItem('to-left');
+    changeCurrentItem( n + 1 );
+    showItem('from-right');
+}
+
+document.querySelector('#left_arrow').addEventListener('click', function(){
+    if(isEnabled) {
+        previousItem(currentItem);
+    }
+});
+
+document.querySelector('#right_arrow').addEventListener('click', function(){
+    if(isEnabled){
+        nextItem(currentItem);
+    }
+});
 
 //screen on / off
 

@@ -28,15 +28,17 @@ body {
     width: 100%;
 }
 
+/* HEADER */
+
 .cotainer {
-    width: 1020px;
+    max-width: 1020px;
     margin: auto
 }
 
 header {
-    width: auto;
-    height: 89px;
+    /* width: 100vw; */
     width: 1020px;
+    height: 89px;
     background-color: #292c37;
     border-bottom: solid #2e3444 6px;
     color: white;
@@ -54,7 +56,7 @@ header h1 a {
 }
 
 header h1 {
-    width: 120px;
+    max-width: 120px;
     margin: 0px;
     padding-left: 40px;
     padding-top: 30px;
@@ -97,34 +99,92 @@ header h1 a:hover{
     color: #f06c64;
 }
 
+/* //HEADER */
+
+/* SLIDER CONTAINER */
+
 .phone_container {
+    width: 100%;
     padding-top: 95px;
-    height: 600px;
+    max-height: 600px;
     position: relative;
+}
+
+.item-container {
+    position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
-.line {
-    transition: all ease 1s;
+.item {
+    display: none;
     position: relative;
-    left: 0;
+    margin: 0 auto;
+    animation: 0.5s ease-in-out;
 }
 
-.sliders {
-    float: left;
+.active_slider, 
+.next {
+    display: block;
+}
+
+.next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.description {
+    display: flex;
+}
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-direction: reverse;
+    animation-name: right;
+}
+
+.from-left {
+    animation-direction: reverse;
+    animation-name: left;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    } 
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    } 
+    to {
+        left: 0;
+    }
 }
 
 #slider-content {
     height: 594px;
-    width: 1020px;
     background-color:#f06c64;
     border-bottom: solid #eb676b 6px;
-    display: block;
+}
+
+#second_slider {
+    border-bottom: solid 6px #84a3df;
 }
 
 #phone_1_container {
-    width: 215px;
-    height: 460px;
     display: flex;
     position: absolute;
     left: 111px;
@@ -158,7 +218,18 @@ header h1 a:hover{
     top: 174px;
  }
 
-#phone_pic_1, #phone_1, #shadow_1, #phone_pic_2, #phone_2, #shadow_2, #left_arrow, #right_arrow, #screen_off_phone1, #screen_off_phone2, #screen_on_off_first, #screen_on_off_second {
+#phone_pic_1,
+ #phone_1, 
+ #shadow_1, 
+ #phone_pic_2, 
+ #phone_2, 
+ #shadow_2, 
+ #left_arrow, 
+ #right_arrow, 
+ #screen_off_phone1, 
+ #screen_off_phone2, 
+ #screen_on_off_first, 
+ #screen_on_off_second {
    position: absolute;
 }
 
@@ -198,39 +269,40 @@ header h1 a:hover{
     left: 13px;
 }
 
-#second_slider {
-    height: 594px;
-    width: 1020px;
-    background-image: url(assets/img/second_slider.png);
-    border-bottom: solid #adbff1 6px;
-    position: relative;
-}
-
 #left_arrow, #right_arrow {
-    width: 50px;
+    width: 10%;
     height: 100%;
+    cursor: pointer;
 }
 
 #left_arrow {
-    left: 40px;
     transition: all 0.2s;
+    left: 0;
+    right: auto;
+    top: 0;
 }
 
 #right_arrow {
-    right: 42px;
+    right: 0;
+    left: auto;
     transition: all 0.2s;
+    top: 0;
 }
 
 #left_arrow div, #right_arrow div {
     position: absolute;
-    top: 40%;
+    top: 50%;
     margin: auto;
-    padding-left: 30%;
+    padding-left: 35%;
 }
 
 #left_arrow:hover, #right_arrow:hover {
     background-color: rgba( 0, 0, 0, 0.2);
 }
+
+/* //SLIDER CONTAINER */
+
+/* SERVICES */
 
 .our_services_container {
     height: 494px;
@@ -350,6 +422,10 @@ header h1 a:hover{
     width: 70px;
     height: 70px;
 }
+
+/* //SERVICES */
+
+/* PORTFOLIO */
 
 .portfolio_container {
     width: 1020px;
@@ -565,6 +641,10 @@ header h1 a:hover{
     border-radius: 5%;
 }
 
+/* //PORTFOLIO */
+
+/* ABOUT_US */
+
 .container_info {
     height: 727px;
     background-color:#f1f1f1;
@@ -673,6 +753,10 @@ header h1 a:hover{
 .photo_info a img:hover {
     background-color:white;
 }
+
+/* //ABOUT_US */
+
+/* GET A QUOTE */
 
 .container_get_a_quote {
     width: 1020px;
@@ -869,6 +953,10 @@ textarea:focus, input:focus, .submit button:focus {
     padding: 7px 11px 0 0;
 }
 
+/* //GET A QUOTE */
+
+/* FOOTER */
+
 footer {
     width: 1020px;
     margin: auto;
@@ -913,3 +1001,5 @@ footer h3 {
 .social_links:hover {
     background-color:#f0d8d9;
 }
+
+/* FOOTER */

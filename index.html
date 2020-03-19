@@ -8,8 +8,12 @@
 </head>
 <body>
     <div class="cotainer">
+
+<!-- HEADER -->
+
         <header class = 'header'>
             <h1><a href="#">SINGOLO<span class="red_star">*</span></a></h1>
+            <!-- menu nav -->
                 <ul id='menu'>
                     <a href="#"><li class="menu_li active" id = 'home_scroll'>HOME</li></a>
                     <a role="button"><li class="menu_li" id = 'services_scroll'>SERVICES</li></a>
@@ -17,11 +21,15 @@
                     <a role="button"><li class="menu_li" id = 'about_us_scroll'>ABOUT</li></a>
                     <a role="button"><li class="menu_li" id = 'contact_scroll'>CONTACT</li></a>
                 </ul>
+            <!-- // -->
         </header>
+
+<!-- SLIDER CONTAINER -->
+
         <div class="phone_container" id='slidersContainer'>
-            <div class="line">
-                <div class="sliders" id='slider-content'>
-                    <div id='phone_1_container'>
+            <div class="item-container">
+                <div class="item active_slider" id='slider-content'>
+                    <div class="description" id='phone_1_container'>
                         <img id='phone_pic_1' src="assets/img/photo_telephone_1.png" alt="phone_pic_1">
                         <img id='phone_1' src="assets/img/telephone_1.png" alt="phone_1">
                         <img id='shadow_1' src="assets/img/shadow_1.png" alt="shadow_1">
@@ -36,8 +44,10 @@
                     <div id ='screen_on_off_first'></div>
                     <div id ='screen_on_off_second'></div>
                 </div>
-                <div class="sliders" id='second_slider'>
-                
+                <div class="item" id='second_slider'>
+                    <div class="description">
+                        <img src='assets/img/second_slider.png' alt='second_slider'>
+                    </div>
                 </div>
             </div>
             <div id='right_arrow'>
@@ -51,6 +61,9 @@
                 </div>
             </div>
         </div>
+
+<!-- SERVICES -->
+
         <div class="our_services_container" id='our_services'>
             <div class="text_content">
                 <h2>Our Services</h2>
@@ -117,16 +130,21 @@
             </div>
         </div>
     </div>
+
+<!-- PORTFOLIO -->
+
     <div class='portfolio_container' id='portfolio'>
         <div class='text_and_links_portfolio'>
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+            <!-- portfolio nav -->
             <ul id='portfolio_ul'>
                 <a href="#portfolio" onclick="suffleImg()"><li class="portfolio_active">All</li></a>
                 <a href="#portfolio" onclick="suffleImg()"><li>Web Design</li></a>
                 <a href="#portfolio" onclick="suffleImg()"><li>Graphic Design</li></a>
                 <a href="#portfolio" onclick="suffleImg()"><li>Artwork</li></a>
             </ul>
+            <!-- // -->
         </div>
         <div class="main_img_container">
             <div class="img_container" id="portfolio_img_container">
@@ -143,7 +161,10 @@
                 <div id="eleven"><img id="eleven_img" src="assets/singolo_2_img/eleven.png" alt="eleven"></div>
                 <div id="twelve"><img id="twelve_img" src="assets/singolo_2_img/twelve.png" alt="twelve"></div>
             </div>
-        </div>        
+        </div>    
+        
+<!-- ABOUT_US -->
+
         <div class='container_info' id='about_us'>
             <div class='text_info'>
                 <h2>About Us</h2>
@@ -194,6 +215,9 @@
             </div>    
         </div>
     </div>
+
+<!--GET A QUOTE  -->
+
     <div class="container_get_a_quote" id='contact'>
         <div class="text_get_a_quote">
             <h2>Get a Quote</h2>
@@ -204,6 +228,9 @@
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
             </p>
         </div>
+
+        <!-- form -->
+
         <div class="form_and_contact_container">
             <div class="form_container">
                 <form id='form'>
@@ -225,6 +252,7 @@
                         </button>
                     </div>
                 </form>
+                <!-- message -->
                 <div id='message_block' class="hidden">
                     <div id='message'>
                         <p>Письмо отправлено</p>
@@ -235,7 +263,9 @@
                         <button id='close_btn'>OK</button>
                     </div>
                 </div>
-            </div>   
+                <!-- // -->
+            </div>  
+             <!-- // -->
             <div class="contact_info">
                 <h3>Contact Information</h3>
                 <p>
@@ -264,6 +294,9 @@
             </div>
         </div>
     </div>
+
+<!-- FOOTER -->
+
     <footer id = 'footer'>
         <h3>&copy Copyright 2013 &middot by PSDchat.com</h3>
         <div id="social_container">
@@ -313,6 +346,9 @@
             </a>
         </div>
     </footer>
+
+<!-- SCRIPT -->
+
     <script src="script.js"></script>
 </body>
 </html>
