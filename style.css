@@ -345,22 +345,20 @@ header h1 a:hover{
 
 #left_arrow, #right_arrow {
     width: 10%;
-    height: 100%;
+    height: 87%;
     cursor: pointer;
+    bottom: 0;
+    transition: all 0.2s;
 }
 
 #left_arrow {
-    transition: all 0.2s;
     left: 0;
     right: auto;
-    top: 0;
 }
 
 #right_arrow {
     right: 0;
     left: auto;
-    transition: all 0.2s;
-    top: 0;
 }
 
 #left_arrow div, #right_arrow div {
@@ -948,8 +946,8 @@ textarea:focus, input:focus, .submit button:focus {
 
 #message {
     position: fixed;
-    top: 30%;
-    left: 30%;
+    top: 40%;
+    left: 40%;
     border: 2px solid black;
     border-radius: 7px;
     text-align: center;
@@ -1090,7 +1088,11 @@ footer h3 {
 
 /* MEDIA */
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    #left_arrow, #right_arrow {
+        height: 82%;
+    }
+
     .services {
         padding-right: 5px;
     }
@@ -1124,7 +1126,7 @@ footer h3 {
     }
 } 
 
-@media (max-width: 375px) {
+@media (max-width: 430px) {
     header {
         height: 71px;
         display: flex;
@@ -1143,6 +1145,11 @@ footer h3 {
     #menu {
         display: none;
     }
+
+    #left_arrow, #right_arrow {
+        height: 75%;
+    }
+
 
     .text_content {
         padding-top: 10px;
