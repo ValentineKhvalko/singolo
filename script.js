@@ -27,6 +27,83 @@ MENU.addEventListener('click', (event) => {
     }
 });
 
+// SIDE MENU
+
+const open_mini_menu = document.querySelector('.open_mini_menu');
+const opened_mini_menu = document.querySelector('.opened_mini_menu');
+const side_menu = document.querySelector('.side-menu');
+const mini_menu = document.getElementById('mini_menu');
+const shadow_block = document.getElementById('shadow_block');
+const mini_singolo = document.getElementById('mini_singolo');
+
+mini_singolo.addEventListener('click', function(){
+    side_menu.style.display = 'none';
+    shadow_block.style.display = 'none'; 
+})
+
+open_mini_menu.addEventListener('click', function(){
+    side_menu.style.display = 'block';
+    shadow_block.style.display = 'block';
+});
+
+opened_mini_menu.addEventListener('click', function(){
+    side_menu.style.display = 'none';
+    shadow_block.style.display = 'none';
+});
+
+shadow_block.addEventListener('click', function(){
+    side_menu.style.display = 'none';
+    shadow_block.style.display = 'none';
+});
+
+mini_menu.addEventListener('click', (event) => {
+    if(event.target.tagName == 'LI') {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        event.target.classList.add('active');
+        side_menu.style.display = 'none';
+        shadow_block.style.display = 'none';
+        if(event.target.id == 'mini_services_scroll') {
+            window.scroll(0, SERVICES.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id == 'mini_portfolio_scroll') {
+            window.scroll(0, PORTFOLIO.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id == 'mini_about_us_scroll') {
+            window.scroll(0, ABOUT_US.offsetTop - HEADER.offsetHeight + 2);
+        }
+        if(event.target.id =='mini_contact_scroll') {
+            window.scroll(0, CONTACT.offsetTop - HEADER.offsetHeight + 2);
+        }
+    }
+});
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY < SERVICES.offsetTop - HEADER.offsetHeight) {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_home_scroll').classList.add('active');
+    }
+    if(window.scrollY >= SERVICES.offsetTop - HEADER.offsetHeight && window.scrollY < PORTFOLIO.offsetTop - HEADER.offsetHeight) {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_services_scroll').classList.add('active');
+    }
+    if(window.scrollY >= PORTFOLIO.offsetTop - HEADER.offsetHeight) {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_portfolio_scroll').classList.add('active');
+    }
+    if(window.scrollY >= ABOUT_US.offsetTop - HEADER.offsetHeight) {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_about_us_scroll').classList.add('active');
+    }
+    if(window.scrollY >= CONTACT.offsetTop - HEADER.offsetHeight) {
+        mini_menu.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_contact_scroll').classList.add('active');
+    }
+    if(window.scrollY+1 >= document.documentElement.scrollHeight-document.documentElement.clientHeight) {
+        MENU.querySelectorAll('li').forEach(el => el.classList.remove('active'));
+        document.getElementById('mini_contact_scroll').classList.add('active');
+    }
+});
+
 //change active links when scroll page 
 
 window.addEventListener('scroll', () => {
@@ -129,16 +206,16 @@ function addRemoveClassHiddenSec() {
 // add portfolio_active class to menu 
 
 const portfolio_ul = document.getElementById('portfolio_ul');
+const PORTFOLIO_CONTAINER = document.getElementById("portfolio_img_container");
 
 portfolio_ul.addEventListener('click', (event) => {
     portfolio_ul.querySelectorAll('li').forEach(el => el.classList.remove('portfolio_active'));
     event.target.classList.add('portfolio_active');
+    PORTFOLIO_CONTAINER.querySelectorAll('div > img').forEach(el => el.classList.remove('active_border'));
 });
 
 
 // add active_border class to portfolio img 
-
-const PORTFOLIO_CONTAINER = document.getElementById("portfolio_img_container");
 
 PORTFOLIO_CONTAINER.addEventListener('click', (event) => {
     PORTFOLIO_CONTAINER.querySelectorAll('div > img').forEach(el => el.classList.remove('active_border'));
@@ -150,7 +227,6 @@ PORTFOLIO_CONTAINER.addEventListener('click', (event) => {
 // Suffle portfolio img 
 
 let portfolio_img_src = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
-let portfolio_img_src_original = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
 
 function suffleImg() {
     suffle(portfolio_img_src);

@@ -10,19 +10,43 @@
     <div class="cotainer">
 
 <!-- HEADER -->
+        <div class='header_div'>
+            <header class = 'header'>
+                <div class='open_mini_menu'>
+                    <svg class="svg" width="35" height="35" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M16 13H2v1h14v-1zm0-5H2v1h14V8zm0-5H2v1h14V3z" fill-rule="nonzero" fill-opacity="1" fill="#fff" stroke="none"></path></svg>
+                </div>
+                <h1><a href="#">SINGOLO<span class="red_star">*</span></a></h1>
+                <!-- menu nav -->
+                    <ul id='menu'>
+                        <a href="#"><li class="menu_li active" id = 'home_scroll'>HOME</li></a>
+                        <a role="button"><li class="menu_li" id = 'services_scroll'>SERVICES</li></a>
+                        <a role="button"><li class="menu_li" id = 'portfolio_scroll'>PORTFOLIO</li></a>
+                        <a role="button"><li class="menu_li" id = 'about_us_scroll'>ABOUT</li></a>
+                        <a role="button"><li class="menu_li" id = 'contact_scroll'>CONTACT</li></a>
+                    </ul>
+                <!-- // -->
+            </header>
+        </div>
 
-        <header class = 'header'>
-            <h1><a href="#">SINGOLO<span class="red_star">*</span></a></h1>
-            <!-- menu nav -->
-                <ul id='menu'>
-                    <a href="#"><li class="menu_li active" id = 'home_scroll'>HOME</li></a>
-                    <a role="button"><li class="menu_li" id = 'services_scroll'>SERVICES</li></a>
-                    <a role="button"><li class="menu_li" id = 'portfolio_scroll'>PORTFOLIO</li></a>
-                    <a role="button"><li class="menu_li" id = 'about_us_scroll'>ABOUT</li></a>
-                    <a role="button"><li class="menu_li" id = 'contact_scroll'>CONTACT</li></a>
-                </ul>
-            <!-- // -->
-        </header>
+<!-- SIDE MENU -->
+<div class="side-menu">
+    <div class="header_side">
+        <div class='opened_mini_menu'>
+            <svg class="svg" width="35" height="35" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M16 13H2v1h14v-1zm0-5H2v1h14V8zm0-5H2v1h14V3z" fill-rule="nonzero" fill-opacity="1" fill="#fff" stroke="none"></path></svg>
+        </div>
+        <h2 id = 'mini_singolo'><a href="#">SINGOLO<span class="red_star">*</span></a></h2>
+    </div>
+    <ul id='mini_menu'>
+        <a href="#"><li class="mini_menu active" id = 'mini_home_scroll'>HOME</li></a>
+        <a role="button"><li class="mini_menu" id = 'mini_services_scroll'>SERVICES</li></a>
+        <a role="button"><li class="mini_menu" id = 'mini_portfolio_scroll'>PORTFOLIO</li></a>
+        <a role="button"><li class="mini_menu" id = 'mini_about_us_scroll'>ABOUT</li></a>
+        <a role="button"><li class="mini_menu" id = 'mini_contact_scroll'>CONTACT</li></a>
+    </ul>
+</div>
+<div id="shadow_block">
+
+</div>
 
 <!-- SLIDER CONTAINER -->
 
@@ -30,23 +54,16 @@
             <div class="item-container">
                 <div class="item active_slider" id='slider-content'>
                     <div class="description" id='phone_1_container'>
-                        <img id='phone_pic_1' src="assets/img/photo_telephone_1.png" alt="phone_pic_1">
-                        <img id='phone_1' src="assets/img/telephone_1.png" alt="phone_1">
-                        <img id='shadow_1' src="assets/img/shadow_1.png" alt="shadow_1">
-                        <div id="screen_off_phone1" class = 'hidden'></div>
+                        <img id='phone_pic_1' src="assets/img/Slider.png" alt="phone_pic_1">
                     </div>
-                    <div id='phone_2_container'>
-                        <img id='phone_pic_2' src="assets/img/pic_t_2.png" alt="phone_pic_2">
-                        <img id='phone_2' src="assets/img/telephone_2.png" alt="phone_2">
-                        <img id='shadow_2' src="assets/img/shadow_2.png" alt="shadow_2">
-                        <div id="screen_off_phone2" class = 'hidden'></div>
-                    </div>
+                    <div id="screen_off_phone1" class = 'hidden'></div> 
+                    <div id="screen_off_phone2" class = 'hidden'></div> 
                     <div id ='screen_on_off_first'></div>
                     <div id ='screen_on_off_second'></div>
                 </div>
                 <div class="item" id='second_slider'>
-                    <div class="description">
-                        <img src='assets/img/second_slider.png' alt='second_slider'>
+                    <div class="description" id='phone_2_container'>
+                        <img id='phone_pic_2' src='assets/img/second_slider.png' alt='second_slider'>
                     </div>
                 </div>
             </div>
@@ -68,9 +85,9 @@
             <div class="text_content">
                 <h2>Our Services</h2>
                 <p>Fusee dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-                Duis mollis, non commodo luctus, nisi erat porttitor</p>
-                <p id='next_p'>ligula, eget lacinia odio sem nec elit. Fusee dapibus, 
-                    tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                Duis mollis, non commodo luctus, nisi erat porttitor
+                ligula, eget lacinia odio sem nec elit. Fusee dapibus, 
+                tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             </div>
             <div class="services_container">
                 <div class="services" id='design'>
@@ -170,8 +187,7 @@
                 <h2>About Us</h2>
                <p>
                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
-                    Duis mollis, non commodo luctus, nisi erat porttitor</p> 
-                <p class='next_p'>
+                    Duis mollis, non commodo luctus, nisi erat porttitor
                     ligula, eget lacinia odio sem nec elit. Fusce dapibus, 
                     tellus ac cursus commodo,tortor mauris condimentum nibh.
                 </p>
@@ -195,10 +211,10 @@
                         Curabitur vestibulum eget mauris quis laoreet. 
                         Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
                     </p>
-                    <a href="#"><img src="assets/singolo_2_img/facebook.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/google+.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/twitter.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/linkedin.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/facebook.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/google+.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/twitter.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/linkedin.png"></a>
                 </div>
                 <div id='third'>
                     <img class="photo_img" src="assets/singolo_2_img/third_photo.png">
@@ -207,10 +223,10 @@
                         Nulla sed nunc et tortor luctus faucibus. 
                         Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
                     </p>
-                    <a href="#"><img src="assets/singolo_2_img/facebook.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/google+.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/twitter.png"></a>
-                    <a href="#"><img src="assets/singolo_2_img/linkedin.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/facebook.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/google+.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/twitter.png"></a>
+                    <a href="#"><img class="links" src="assets/singolo_2_img/linkedin.png"></a>
                 </div>
             </div>    
         </div>
@@ -269,9 +285,9 @@
             <div class="contact_info">
                 <h3>Contact Information</h3>
                 <p>
-                    Quisque hendrerit purus dapibus, ornare nibh vitae, viver-<br>
-                    ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat<br>
-                    libero. Nulla sed nunc et tortor luctus faucibus. Morbi at<br>
+                    Quisque hendrerit purus dapibus, ornare nibh vitae, viver-
+                    ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat
+                    libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
                      aliquet turpis, et consequat felis. 
                 </p>
                 <div class="adress_container">
