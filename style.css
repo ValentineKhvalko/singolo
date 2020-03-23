@@ -207,7 +207,7 @@ header h1 a:hover{
 
 .phone_container {
     width: 100%;
-    padding-top: 10vh;
+    padding-top: 89px;
     height: 100%;
     position: relative;
 }
@@ -1144,6 +1144,10 @@ footer h3 {
     
     #menu {
         display: none;
+    }
+
+    .phone_container {
+        padding-top: 71px;
     }
 
     #left_arrow, #right_arrow {
