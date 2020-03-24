@@ -18,7 +18,7 @@
     src: url('assets/fonts/Lato-Light.ttf');
 }
 
-html {
+html {  
     scroll-behavior: smooth;
 }
 
@@ -1088,9 +1088,9 @@ footer h3 {
 
 /* MEDIA */
 
-@media (max-width: 800px) {
+@media (max-width:1019px) and (min-width: 768px) {
     #left_arrow, #right_arrow {
-        height: 82%;
+        height: 85%;
     }
 
     .services {
@@ -1126,7 +1126,7 @@ footer h3 {
     }
 } 
 
-@media (max-width: 430px) {
+@media (max-width: 767px) {
     header {
         height: 71px;
         display: flex;
@@ -1151,7 +1151,7 @@ footer h3 {
     }
 
     #left_arrow, #right_arrow {
-        height: 75%;
+        height: 85%;
     }
 
 
@@ -1257,5 +1257,11 @@ footer h3 {
         position: relative;
         display: inline-block;  
         padding-left: 40%;
+    }
+}
+
+@media (max-width: 380px) {
+    #left_arrow, #right_arrow {
+        height: 75%;
     }
 }
