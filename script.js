@@ -39,7 +39,7 @@ const mini_singolo = document.getElementById('mini_singolo');
 mini_singolo.addEventListener('click', function(){
     side_menu.style.display = 'none';
     shadow_block.style.display = 'none'; 
-})
+});
 
 open_mini_menu.addEventListener('click', function(){
     side_menu.style.display = 'block';
@@ -206,21 +206,24 @@ function addRemoveClassHiddenSec() {
 // add portfolio_active class to menu 
 
 const portfolio_ul = document.getElementById('portfolio_ul');
-const PORTFOLIO_CONTAINER = document.getElementById("portfolio_img_container");
+const PORTFOLIO_CONTAINER = document.querySelector("#portfolio_img_container");
 
 portfolio_ul.addEventListener('click', (event) => {
     portfolio_ul.querySelectorAll('li').forEach(el => el.classList.remove('portfolio_active'));
     event.target.classList.add('portfolio_active');
-    PORTFOLIO_CONTAINER.querySelectorAll('div > img').forEach(el => el.classList.remove('active_border'));
+    PORTFOLIO_CONTAINER.querySelectorAll('img').forEach(el => el.style.boxShadow = "none"   );
 });
 
 
 // add active_border class to portfolio img 
 
-PORTFOLIO_CONTAINER.addEventListener('click', (event) => {
-    PORTFOLIO_CONTAINER.querySelectorAll('div > img').forEach(el => el.classList.remove('active_border'));
-    if(event.target.tagName === 'IMG') {
-        event.target.classList.add('active_border');
+PORTFOLIO_CONTAINER.addEventListener('click', event => {
+    let target = event.target;
+    if (target.tagName == 'IMG') {
+        PORTFOLIO_CONTAINER.querySelectorAll('img').forEach(item => {
+            item.style.boxShadow = "none";
+        });
+        event.target.style.boxShadow = "0px 0px 0px 5px #F06C64";
     }
 });
 
