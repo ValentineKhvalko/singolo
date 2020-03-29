@@ -60,10 +60,8 @@ header h1 a {
 }
 
 header h1 {
-    max-width: 120px;
-    margin: 0px;
-    padding-left: 4%;
-    padding-top: 3%;
+    margin: 0;
+    padding: 30px 40px;
     font-family: 'Lato-Bold';
     font-size: 24px; 
 } 
@@ -77,14 +75,9 @@ header h1 a:hover{
 }
 
 .open_mini_menu {
-    width: 20%;
-    height: 100%;
+    padding: 20px;
     align-items: center;
     display: none;
-}
-
-.open_mini_menu svg {
-    margin: auto;
 }
 
 .open_mini_menu:hover {
@@ -144,11 +137,9 @@ header h1 a:hover{
 
 
 .header_side{
-    width: 100%;
     height: 71px;
     display: flex;
     align-items: center;
-    padding-left: 5%;
 }
 
 .header_side h2 {
@@ -168,11 +159,8 @@ header h1 a:hover{
 .opened_mini_menu {
     align-items: center;
     cursor: pointer;
-    transform: rotate(90deg)
-}
-
-.opened_mini_menu svg{
-    margin: auto;
+    transform: rotate(90deg);
+    padding: 20px;
 }
 
 #mini_menu {
@@ -377,7 +365,6 @@ header h1 a:hover{
 /* SERVICES */
 
 .our_services_container {
-    min-height: 494px;
     background-color: #f2f2f2;
     border-bottom: solid white 6px;
     color: #666d89;
@@ -385,10 +372,8 @@ header h1 a:hover{
 }
 
 .text_content {
-    padding-top: 40px;
-    margin-left: 40px;
+    padding: 60px 40px 10px;
     font-family: 'Lato-Black';
-    min-height: 175px;
     font-size: 15px;
 }
 
@@ -399,10 +384,8 @@ header h1 a:hover{
 }
 
 .text_content p {
-    margin: 0px;
     font-family: 'Lato-Light';
     font-size: 18px;
-    padding-right: 20px;
     line-height: 29px;
     font-stretch: ultra-condensed;
     letter-spacing: -0.06px;
@@ -445,23 +428,20 @@ header h1 a:hover{
 }
 
 .services {
-    min-height: 124px;
     overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-right: 20px;
+    margin: 10px;
 }
 
 .services_container {
-    margin-left: 4%;
     display: -ms-grid;
     display: grid;
         grid-template-areas: 
     'd i a'
     'l s st';
-    padding-top: 20px;
-    padding-right: 20px;
+    padding: 0 30px 30px 30px;
 }
 
 .services_text {
@@ -496,27 +476,22 @@ header h1 a:hover{
 /* PORTFOLIO */
 
 .portfolio_container {
-    width: 1020px;
     margin: auto;
     background-color:#2d2f39;
-    max-width: 100%;
+    max-width: 1020px;
 }
 
 .text_and_links_portfolio {
-    padding-left: 4%;
-    min-height: 196px;
+    padding: 60px 40px 0 40px;
 }
 
 .text_and_links_portfolio h2 {
-    width:120px;
-    max-width: 100%;
     font-size: 30px;
     line-height: 18px;
     font-family: "Lato-Bold";
     font-weight: 900;
     text-align: left;
     margin-top: 0px;
-    padding-top: 70px;
     letter-spacing: 0.5px;
     color: #666d89;
 }
@@ -547,7 +522,6 @@ header h1 a:hover{
 .text_and_links_portfolio ul {
     margin: 0px;
     padding-left: 0px;
-    padding-bottom: 19px;
 }
 
 .text_and_links_portfolio li a {
@@ -566,6 +540,7 @@ header h1 a:hover{
     margin-right: 6px;
     display: inline;
     list-style-type: none;
+    cursor: pointer;
     padding: 3.5px 6px;
     font-size: 10.5px;
     line-height: 22px;
@@ -670,35 +645,22 @@ header h1 a:hover{
 }
 
 .img_container div {
-    padding: 0px;
     position: relative;
 }
 
 .img_container div img {
-    position: absolute;
-    width: 220px;
-    max-width: 100%;
-    height: 187px;
-    max-height: 100%;
-    
+    width: 100%;
 }
 
 .main_img_container {
-    height: 668px;
-    max-height: 100%;
     border-bottom:#313745 solid 6px;
 }
 
 .img_container {
-    height: 620px;
-    max-height: 100%;
-    padding-left: 4%;
-    padding-right: 4%;
-    overflow: hidden;
+    padding: 20px 40px 65px 40px;
     display: -ms-grid;
-    grid-template-columns: repeat(4);
     display: grid;
-    grid-gap: 2%;
+    grid-gap: 20px;
         grid-template-areas:
     "o t th f"
     "fi s se e"
@@ -724,13 +686,11 @@ header h1 a:hover{
 .container_info {
     background-color:#f1f1f1;
     border-bottom: solid 6px white;
-    padding-left: 4%;
-    padding-right: 2.5%;
+    padding: 60px 40px;
 }
 
 .text_info h2 {
     margin: 0px;
-    padding-top: 7%;
     font-family: 'Lato-Bold';
     font-size: 5vh;
     line-height: 18px;
@@ -740,16 +700,12 @@ header h1 a:hover{
 }
 
 .text_info p {
-    margin: 0px;
     font-size: 18px;
     line-height: 30px;
-    padding-top: 4%;
     color: #767e9e;
     font-family: "Lato-Light";
     font-weight: 300;
     text-align: left;
-    letter-spacing: -0.04px;
-    padding-bottom: 3%;
 }
 
 #first {
@@ -771,24 +727,12 @@ header h1 a:hover{
     grid-area: third;
 }
 
-.photo_info div {
-    max-width: 300px;
-    max-height: 300px; 
-
-}
-
-.photo_info div .photo_img {
-    height: 100%;
-    width: 100%;
-}
-
 .photo_info {
-    grid-gap: 1.5%;
+    grid-gap: 20px;
     display: -ms-grid;
     display: grid;
         grid-template-areas: 
     "first second third";
-    padding-bottom: 20%;
 }
 
 .photo_info h2 {
@@ -833,67 +777,51 @@ header h1 a:hover{
 /* GET A QUOTE */
 
 .container_get_a_quote {
-    width: 1020px;
-    max-width: 100%;
+    max-width: 1020px;
     margin: auto;
     background-color:#f06c64;
-    min-height: 648px;
     border-bottom: solid 6px #eb676b;
 }
 
 .text_get_a_quote {
-    width: 940px;
-    max-width: 92%;
-    padding-left: 5%;
+    padding: 60px 40px 0 40px;
     color: #f0d1d1;
 }
 
 .text_get_a_quote h2 {
-    margin: 0px;
-    padding-top: 7%;
     font-family: 'Lato-Bold';
     font-size: 30px;
     line-height: 18px;;
     font-weight: 900;
-    text-align: left;
-    letter-spacing: -0.1px;
 }
 
 .text_get_a_quote p {
-    width: 100%;
-    margin-bottom: 0px;
     font-size: 18px;
     line-height: 30px;
     font-family: "Lato-Light";
     font-weight: 300;
-    text-align: justify;
-    letter-spacing: -0.05px;
 }
 
 .form_and_contact_container {
-    padding-left: 5%;
+    padding: 20px 40px 60px 40px;
     display: flex;
-    width: 90%;
 }
 
 .form_container {
-    margin-top: 5%;
-    width: 90%;
+    width: 100%;
 }
 
 .input_container input, textarea {
     background-color: #d6564f;
     border: 1px solid #d6564f; 
     border-radius: 5px;
-    width: 94%;
-    margin-right: 3%;
+    width: calc(100% - 18px);
     height: 34px;
     margin-bottom: 16px;
     font-family: "Lato-Regular";
     font-size: 11px;
     padding-left: 14px; 
     color:#ec7e7f;
-    letter-spacing: 0.6px;
     resize: none;
 }
 
@@ -911,7 +839,6 @@ textarea:focus, input:focus, .submit button:focus {
 }
 
 #describe {
-    width: 94%;
     height: 159px;
     padding-top: 10px;
 }
@@ -948,17 +875,20 @@ textarea:focus, input:focus, .submit button:focus {
     position: fixed;
     top: 40%;
     left: 40%;
+    max-width: 500px;
     border: 2px solid black;
     border-radius: 7px;
     text-align: center;
     line-height: 5px;
     color: white;
-    background-color: #f06c64;;
+    background-color: #f06c64;
 }
 
 #message p {
     padding: 0 20px;
     line-height: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #close_btn {
@@ -971,19 +901,17 @@ textarea:focus, input:focus, .submit button:focus {
 }
 
 .contact_info {
-    width: 30%;
+    margin-left: 20px;
+    width: 40%;
 }
 
 .contact_info h3 {
     margin: 0px;
-    padding-top: 44px;
     font-family: 'Lato-Bold';
     font-size: 18px;
     color: #f0d1d1;
     line-height: 18px;;
     font-weight: 900;
-    text-align: left;
-    letter-spacing: 0.15px;
 }
 
 .adress_container {
@@ -1098,14 +1026,11 @@ footer h3 {
     }
     
     .services_container {
-        margin-left: 4%;;
-            grid-template-areas: 
+        grid-template-areas: 
         'd i'
         'a l'
         's st';
-        grid-gap: 5%;
-        padding-right: 5px;
-        padding-bottom: 10%;
+        grid-gap: 20px;
     }
 
     .img_container {
@@ -1114,11 +1039,14 @@ footer h3 {
         "f fi s"
         "se e n"
         "te el tw";
-        grid-gap: 3%;
+    }
+
+    .photo_info div .photo_img {
+        width: 100%;
     }
 
     .photo_info div {
-        max-width: 217px;
+        max-width: 210px;
     }
 
     #message {
@@ -1156,17 +1084,11 @@ footer h3 {
 
 
     .text_content {
-        padding-top: 10px;
-        margin-left: 20px;
+        padding: 25px 30px 0 30px ;
     }
 
     .text_content h2 {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .text_content p {
-        padding-right: 5%;
+        margin: 0;
     }
 
     .services_container {
@@ -1174,19 +1096,24 @@ footer h3 {
         padding-bottom: 0;
     }
 
-    .text_and_links_portfolio p {
-        padding-right: 5%;
+    .services {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+
+    .text_and_links_portfolio {
+        padding: 40px 30px 0 30px;
         text-align: justify;
     }
 
     .img_container {
-        padding-right: 5%;
+        padding: 25px 30px 40px 30px;
         grid-template-areas:
         "o t"
         "th f"
         "fi s"
         "se e";
-        grid-gap: 3%;
+        grid-gap: 13px;
     }
 
     .img_container div:nth-child(n+9){
@@ -1194,45 +1121,34 @@ footer h3 {
     }
     
     .container_info {
-        padding-top: 10%;
-    }
-
-    .text_info p {
-        padding-top: 10%;
+        padding:30px 30px 0 30px;
     }
 
     .photo_info {
-        padding-top: 9%;
         display: block;
     }
 
     .photo_info div {
-        max-width: 300px;
-        max-height: 300px;
+        padding-bottom: 20px;
     }
 
-    .photo_info div {
-        padding-bottom: 50%;
-        margin: auto;
-    }
-    
-    .photo_info p {
-        margin: 10px 0 0 0;
-        padding-bottom: 3%;
+    .photo_info div .photo_img {
+        width: 100%;
     }
 
-    #third {
-        padding-bottom: 30%;
+    .text_get_a_quote {
+        padding: 30px 30px 0 30px;
     }
+
 
     .form_and_contact_container {
-        width: 92%;
+        padding: 20px 30px 40px 30px;
         display: block;
-        padding-bottom: 10%;
     }
 
     .form_container {
         width: 100%;
+        padding-bottom: 30px;
     }
 
     .contact_info {
@@ -1249,6 +1165,10 @@ footer h3 {
         left: 5%;
     }
 
+    .contact_info {
+        margin-left: 0;
+    }
+
     footer h3 {
         display: none;
     }
@@ -1263,5 +1183,10 @@ footer h3 {
 @media (max-width: 380px) {
     #left_arrow, #right_arrow {
         height: 75%;
+    }
+
+    .text_and_links_portfolio li {
+        margin-right: 4px;
+        padding: 3.5px 2px;
     }
 }
